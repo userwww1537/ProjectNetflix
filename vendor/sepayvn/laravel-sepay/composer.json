@@ -1,0 +1,57 @@
+{
+    "name": "sepayvn/laravel-sepay",
+    "description": "Laravel Package cho SePay - Giải pháp tự động hóa cho thanh toán chuyển khoản ngân hàng",
+    "keywords": [
+        "SePay",
+        "laravel",
+        "laravel-sepay"
+    ],
+    "homepage": "https://github.com/sepayvn/laravel-sepay",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SePay",
+            "email": "info@sepay.vn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 | ^8.0",
+        "illuminate/contracts": "^7.0 | ^8.0 | ^9.28 | ^10.0 | ^11.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SePay\\SePay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SePay\\SePay\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SePay\\SePay\\SePayServiceProvider"
+            ],
+            "aliases": {
+                "SePay": "SePay\\SePay\\Facades\\SePay"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
